@@ -149,7 +149,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-bridal-1",
         title: "Royal Crimson Velvet Lehenga Cinematic Reveal",
         mediaUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+=======
+        videoUrl: "/videos/bridal-couture.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80",
         duration: "0:30",
         mediaType: "video",
@@ -168,7 +172,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-bridal-2",
         title: "Heritage Polki Choker Necklace & Emerald Highlights",
         mediaUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+=======
+        videoUrl: "/videos/jewelry-macro.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
         duration: "0:25",
         mediaType: "video",
@@ -185,7 +193,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-bridal-3",
         title: "Jaipur Palace Wedding Grand Entry Teaser",
         mediaUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://media.w3.org/2010/05/sintel/trailer.mp4",
+=======
+        videoUrl: "/videos/cinematic-reel.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
         duration: "0:45",
         mediaType: "video",
@@ -224,7 +236,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-fashion-1",
         title: "Metamorphosis: Iridescent Wing Silk Gown",
         mediaUrl: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://media.w3.org/2010/05/bunny/trailer.mp4",
+=======
+        videoUrl: "/videos/fashion-runway.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80",
         duration: "0:28",
         mediaType: "video",
@@ -240,7 +256,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-fashion-2",
         title: "Neo-Tokyo Cyber Streetwear Drop Campaign",
         mediaUrl: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+=======
+        videoUrl: "/videos/cinematic-reel.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
         duration: "0:35",
         mediaType: "video",
@@ -279,7 +299,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-drinks-1",
         title: "Electric Lime Sparkling Can Splash Explosion",
         mediaUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://samplelib.com/lib/preview/mp4/sample-20s.mp4",
+=======
+        videoUrl: "/videos/drinks-burst.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
         duration: "0:20",
         mediaType: "video",
@@ -295,7 +319,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-drinks-2",
         title: "Obsidian Reserve Bourbon Zero-Gravity Pour",
         mediaUrl: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://media.w3.org/2010/05/bunny/movie.mp4",
+=======
+        videoUrl: "/videos/jewelry-macro.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80",
         duration: "0:30",
         mediaType: "video",
@@ -334,7 +362,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-jewel-1",
         title: "Cushion Cut Solitaire Diamond Floating Sparkle",
         mediaUrl: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://media.w3.org/2010/05/video/movie_300.mp4",
+=======
+        videoUrl: "/videos/jewelry-macro.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
         duration: "0:25",
         mediaType: "video",
@@ -373,7 +405,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-beauty-1",
         title: "Botanical Essence Dropper on Morning Lotus",
         mediaUrl: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+=======
+        videoUrl: "/videos/cinematic-reel.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80",
         duration: "0:25",
         mediaType: "video",
@@ -412,7 +448,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-food-1",
         title: "Artisan Binchotan Wagyu Sizzle Reel",
         mediaUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://www.w3schools.com/html/movie.mp4",
+=======
+        videoUrl: "/videos/culinary-wagyu.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
         duration: "0:30",
         mediaType: "video",
@@ -451,7 +491,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-travel-1",
         title: "Santorini Cliffside Sunset Infinity Pool Teaser",
         mediaUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+=======
+        videoUrl: "/videos/travel-drone.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
         duration: "0:40",
         mediaType: "video",
@@ -490,7 +534,11 @@ export const MOCK_CREATORS: CreatorProfile[] = [
         id: "p-tech-1",
         title: "Titanium Cybernetic Chronograph Exploded Assembly",
         mediaUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+<<<<<<< HEAD
         videoUrl: "https://samplelib.com/lib/preview/mp4/sample-15s.mp4",
+=======
+        videoUrl: "/videos/cinematic-reel.mp4",
+>>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         thumbnailUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
         duration: "0:30",
         mediaType: "video",
