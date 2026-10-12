@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+frontend/node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -19,6 +20,11 @@
 
 # production
 /build
+dist/
+
+# Python
+venv/
+__pycache__/
 
 # misc
 .DS_Store
@@ -32,6 +38,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
