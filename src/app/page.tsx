@@ -190,28 +190,6 @@ export default function Home() {
             </Button>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Trust Metrics Bar */}
-          <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-white/5">
-            <div className="p-3">
-              <span className="text-2xl sm:text-3xl font-bold font-mono text-white block">$480K+</span>
-              <span className="text-xs text-slate-400">Escrow Paid Out</span>
-            </div>
-            <div className="p-3">
-              <span className="text-2xl sm:text-3xl font-bold font-mono text-indigo-400 block">1,200+</span>
-              <span className="text-xs text-slate-400">Commercial Briefs</span>
-            </div>
-            <div className="p-3">
-              <span className="text-2xl sm:text-3xl font-bold font-mono text-cyan-400 block">100%</span>
-              <span className="text-xs text-slate-400">Verified Prompt Receipts</span>
-            </div>
-            <div className="p-3">
-              <span className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 block">4.97 ★</span>
-              <span className="text-xs text-slate-400">Average Client Rating</span>
-            </div>
-          </div>
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         </div>
       </section>
 

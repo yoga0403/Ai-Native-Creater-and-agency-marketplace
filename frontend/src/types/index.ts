@@ -20,7 +20,6 @@ export interface PortfolioItem {
   mediaUrl: string;
   videoUrl?: string; // Direct video streaming link for HTML5 playback
   thumbnailUrl?: string; // High-res poster frame before play
-<<<<<<< HEAD
   videoAttribution?: {
     title: string;
     creator: string;
@@ -28,8 +27,6 @@ export interface PortfolioItem {
     sourceUrl: string;
     licenseUrl: string;
   };
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
   duration?: string; // e.g. "0:30", "0:45"
   mediaType: "image" | "video" | "audio" | "3d";
   category: MediaCategory;
@@ -151,7 +148,3 @@ export interface UserAccount {
   companyName?: string;
   bio?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
