@@ -56,13 +56,10 @@ const API_BASE = 'http://localhost:5000/api';
 
 const FALLBACK_IMAGE =
   'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';
-<<<<<<< HEAD
 const AUTH_TOKEN_KEY = 'creatorconnect_auth_token';
 
 const getAuthToken = () =>
   localStorage.getItem(AUTH_TOKEN_KEY) || sessionStorage.getItem(AUTH_TOKEN_KEY);
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
 
 // Curated Trending Showcase Items across all 8 sectors
 const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: string; avatarUrl: string })[] = [
@@ -70,7 +67,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-1',
     title: 'Royal Crimson Velvet Lehenga Reel',
     mediaUrl: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Jurun_Ceremony.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -81,11 +77,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
     duration: '1:03',
-=======
-    videoUrl: '/videos/bridal-couture.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80',
-    duration: '0:30',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     mediaType: 'video',
     category: 'Bridal & Wedding',
     prompt: 'Cinematic slow motion tracking shot of an Indian bride twirling in hand-embroidered royal velvet lehenga inside candlelit palace, gold zardozi shimmering, anamorphic 8k.',
@@ -101,7 +92,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-2',
     title: 'Sparkling Citrus Soda Burst Commercial',
     mediaUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f4/Blueberry_Energy_Boost_Smoothie._A_Daphne_Oz_Smoothie_Recipe.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -112,11 +102,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
     },
     duration: '2:17',
-=======
-    videoUrl: '/videos/drinks-burst.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
-    duration: '0:25',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     mediaType: 'video',
     category: 'Drinks & Beverage',
     prompt: 'High-speed macro strobe slow-motion camera tracking a chilled citrus sparkling can bursting through crystalline ice cubes and lime droplets, studio lighting.',
@@ -132,7 +117,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-3',
     title: 'Cyberpunk Haute Couture Runway',
     mediaUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Amsterdam_Fashion_Week_-_Aftermovie.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -143,11 +127,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
     },
     duration: '2:31',
-=======
-    videoUrl: '/videos/fashion-runway.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
-    duration: '0:30',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     mediaType: 'video',
     category: 'Clothing & Fashion',
     prompt: 'Iridescent liquid organza trench coat flowing in slow motion along a neon-lit futuristic runway in rain, Tokyo reflections, high fashion editorial camera.',
@@ -163,7 +142,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-4',
     title: '24K Emerald Cut Solitaire Macro',
     mediaUrl: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/3D_CGI_Jewellery_Animation.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -173,10 +151,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:3D_CGI_Jewellery_Animation.webm',
       licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
     },
-=======
-    videoUrl: '/videos/jewelry-macro.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     duration: '0:25',
     mediaType: 'video',
     category: 'Jewellery & Accessories',
@@ -193,7 +167,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-5',
     title: 'Santorini Cliffside 4K Drone Sunset',
     mediaUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Ocean_waves_at_L%C3%A6kjavik_beach%2C_Iceland.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -204,11 +177,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
     },
     duration: '0:09',
-=======
-    videoUrl: '/videos/travel-drone.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    duration: '0:45',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     mediaType: 'video',
     category: 'Travel & Lifestyle',
     prompt: 'Cinematic FPV drone descent over cliffside infinity pool into Aegean Sea golden hour sunset, 4K HDR luxury resort promotional commercial.',
@@ -224,7 +192,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
     id: 'trend-6',
     title: 'Sizzling A5 Wagyu Charcoal Grill',
     mediaUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-<<<<<<< HEAD
     videoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Amazing_Falafel_Shop_in_Tehran_-_IRAN_Street_Food_-_%D9%81%D9%84%D8%A7%D9%81%D9%84.webm',
     thumbnailUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
     videoAttribution: {
@@ -235,11 +202,6 @@ const TRENDING_SHOWCASE: (PortfolioItem & { creatorName: string; creatorHandle: 
       licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
     },
     duration: '8:10',
-=======
-    videoUrl: '/videos/culinary-wagyu.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
-    duration: '0:20',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     mediaType: 'video',
     category: 'Food & Restaurants',
     prompt: 'Sensory extreme macro slow-motion 120fps video of A5 Wagyu ribeye searing over glowing binchotan charcoal with rising smoke and fat render.',
@@ -414,11 +376,7 @@ export function App() {
       const data = await res.json();
 
       if (res.ok && data.success && data.user) {
-<<<<<<< HEAD
         completeSuccessfulAuth(data.user, 'Signed in successfully!', data.token);
-=======
-        completeSuccessfulAuth(data.user, 'Signed in successfully!');
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
       } else {
         setAuthError(data.message || 'Invalid email or password. Please verify your credentials.');
       }
@@ -489,15 +447,10 @@ export function App() {
       });
       const data = await res.json();
 
-<<<<<<< HEAD
       if (res.ok && data.success && data.user && data.token) {
         completeSuccessfulAuth(data.user, `Account created! Welcome, ${data.user.name}!`, data.token);
       } else if (res.ok && data.requiresEmailConfirmation) {
         setAuthError(data.message || 'Confirm your email address, then sign in.');
-=======
-      if (res.ok && data.success && data.user) {
-        completeSuccessfulAuth(data.user, `Account created! Welcome, ${data.user.name}!`);
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
       } else {
         setAuthError(data.message || 'Unable to register account. This email may already be in use.');
       }
@@ -519,7 +472,6 @@ export function App() {
     }
   };
 
-<<<<<<< HEAD
   const completeSuccessfulAuth = (user: UserAccount, welcomeMessage: string, token?: string) => {
     setCurrentUser(user);
     setCurrentRole(user.role);
@@ -528,11 +480,6 @@ export function App() {
     if (token) {
       (rememberMe ? localStorage : sessionStorage).setItem(AUTH_TOKEN_KEY, token);
     }
-=======
-  const completeSuccessfulAuth = (user: UserAccount, welcomeMessage: string) => {
-    setCurrentUser(user);
-    setCurrentRole(user.role);
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     if (rememberMe) {
       localStorage.setItem('creatorconnect_auth_user', JSON.stringify(user));
     }
@@ -581,11 +528,8 @@ export function App() {
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('creatorconnect_auth_user');
-<<<<<<< HEAD
     localStorage.removeItem(AUTH_TOKEN_KEY);
     sessionStorage.removeItem(AUTH_TOKEN_KEY);
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     showToast('Signed out successfully.');
   };
 
@@ -714,11 +658,7 @@ export function App() {
     }
   };
 
-<<<<<<< HEAD
   const handleCreateBriefSubmit = async (e: React.FormEvent) => {
-=======
-  const handleCreateBriefSubmit = (e: React.FormEvent) => {
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     e.preventDefault();
     const created: BrandBrief = {
       id: `brief-${Date.now()}`,
@@ -741,7 +681,6 @@ export function App() {
       createdAt: 'Just now',
       featured: true,
     };
-<<<<<<< HEAD
 
     const token = getAuthToken();
     if (token) {
@@ -768,9 +707,6 @@ export function App() {
       setBriefs([created, ...briefs]);
     }
 
-=======
-    setBriefs([created, ...briefs]);
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     setIsCreateBriefOpen(false);
     showToast('Campaign brief successfully published to marketplace!');
   };
@@ -1495,37 +1431,6 @@ export function App() {
                 </button>
               </div>
 
-<<<<<<< HEAD
-=======
-              {/* Verified Trust Chips */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(4, 1fr)',
-                  gap: '1rem',
-                  marginTop: '1.5rem',
-                  paddingTop: '1.75rem',
-                  borderTop: '1px solid var(--border-subtle)',
-                }}
-              >
-                <div>
-                  <span style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#FFFFFF' }}>$480K+</span>
-                  <p style={{ fontSize: '0.72rem', color: '#94A3B8', margin: 0 }}>Escrow Paid Out</p>
-                </div>
-                <div>
-                  <span style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#C4B5FD' }}>1,200+</span>
-                  <p style={{ fontSize: '0.72rem', color: '#94A3B8', margin: 0 }}>Campaign Briefs</p>
-                </div>
-                <div>
-                  <span style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#06B6D4' }}>100%</span>
-                  <p style={{ fontSize: '0.72rem', color: '#94A3B8', margin: 0 }}>Verified Receipts</p>
-                </div>
-                <div>
-                  <span style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#10B981' }}>4.98 ★</span>
-                  <p style={{ fontSize: '0.72rem', color: '#94A3B8', margin: 0 }}>Client Satisfaction</p>
-                </div>
-              </div>
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
             </div>
 
             {/* Right Column: Visually Striking Staggered Creator Media Collage */}
@@ -2487,20 +2392,11 @@ export function App() {
               {inspectingItem.mediaType === 'video' || inspectingItem.videoUrl ? (
                 <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <VideoPlayer
-<<<<<<< HEAD
                     key={inspectingItem.videoUrl || inspectingItem.id}
                     src={inspectingItem.videoUrl || ''}
                     poster={inspectingItem.thumbnailUrl || inspectingItem.mediaUrl}
                     title={inspectingItem.title}
                     aspectRatio={inspectingItem.aspectRatio || '16:9'}
-=======
-                    key={inspectingItem.id}
-                    src={inspectingItem.videoUrl || inspectingItem.mediaUrl}
-                    poster={inspectingItem.thumbnailUrl || inspectingItem.mediaUrl}
-                    title={inspectingItem.title}
-                    aspectRatio={inspectingItem.aspectRatio || '16:9'}
-                    fallbackSrc="/videos/cinematic-reel.mp4"
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
                   />
 
                   <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.85rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -2509,7 +2405,6 @@ export function App() {
                       <span className="badge badge-cyan">Duration: {inspectingItem.duration}</span>
                     )}
                     <span className="badge badge-tool" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#34D399', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
-<<<<<<< HEAD
                       HTML5 Video (WebM)
                     </span>
                   </div>
@@ -2525,11 +2420,6 @@ export function App() {
                       </a>
                     </p>
                   )}
-=======
-                      HTML5 Direct Streaming (H.264 / AAC)
-                    </span>
-                  </div>
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
                 </div>
               ) : (
                 <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -2982,7 +2872,6 @@ export function App() {
             </div>
 
             <form
-<<<<<<< HEAD
                     onSubmit={async (e) => {
                 e.preventDefault();
                       const token = getAuthToken();
@@ -3012,10 +2901,6 @@ export function App() {
                           return;
                         }
                       }
-=======
-              onSubmit={(e) => {
-                e.preventDefault();
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
                 setIsSubmitProposalOpen(false);
                 showToast(`Pitch submitted to ${selectedBriefForPitch.brandName} for $${pitchAmount}!`);
               }}
