@@ -47,7 +47,6 @@ export const PromptInspectorModal: React.FC<PromptInspectorModalProps> = ({
         {/* Left Canvas: High-Resolution Preview */}
         <div className="lg:w-7/12 bg-black flex flex-col items-center justify-center relative min-h-[350px] lg:min-h-[550px] overflow-hidden">
           {/* Background image preview */}
-<<<<<<< HEAD
           {item.mediaType === "video" ? (
             <video
               key={item.mediaUrl}
@@ -66,13 +65,6 @@ export const PromptInspectorModal: React.FC<PromptInspectorModalProps> = ({
               className="w-full h-full object-contain max-h-[600px]"
             />
           )}
-=======
-          <img
-            src={item.mediaUrl}
-            alt={item.title}
-            className="w-full h-full object-contain max-h-[600px]"
-          />
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
           <div className="absolute bottom-3 left-3 flex items-center gap-2">
             <span className="text-xs px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md text-slate-300 border border-white/10 font-mono">
               {item.aspectRatio}

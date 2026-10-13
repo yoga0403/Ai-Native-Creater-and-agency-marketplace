@@ -190,8 +190,6 @@ export default function Home() {
             </Button>
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Trust Metrics Bar */}
           <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-white/5">
             <div className="p-3">
@@ -211,7 +209,6 @@ export default function Home() {
               <span className="text-xs text-slate-400">Average Client Rating</span>
             </div>
           </div>
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         </div>
       </section>
 

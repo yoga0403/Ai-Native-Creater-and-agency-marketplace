@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -35,43 +34,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# AI-Native Creator & Agency Marketplace
-
-An AI-native collaborative ecosystem connecting brands, agencies, and generative AI creators with automated DealRooms, smart matchmaking, prompt inspection, and brief copilots.
-
-## 🚀 Overview
-
-- **Frontend & App**: Next.js 15, Tailwind CSS, Lucide icons, Vite client in `/frontend`.
-- **Backend**: Express API server in `/backend`.
-- **Features**:
-  - AI Brief Copilot & generator
-  - Dynamic DealRoom modal & contract escrow simulation
-  - Prompt inspector & AI model metadata tags
-  - Creator discovery with filtered video showcase
-
-## 🛠️ Getting Started
-
-### Root Next.js Application
-```bash
-npm install
-npm run dev
-```
-
-### Backend Server
-```bash
-cd backend
-npm install
-npm run dev
-```
-
-### Vite Frontend (Alternative / Sub-client)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-## 📖 Architecture & Documentation
-For deep-dive architectural specifications, data models, and workflow details, refer to [ARCHITECTURE.md](ARCHITECTURE.md).
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
