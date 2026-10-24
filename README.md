@@ -92,6 +92,8 @@ A production-ready PostgreSQL / Supabase schema is included in `supabase_schema.
 
 ## 🏃 Running the Project
 
+For separate production deployments on Render (API) and Vercel (frontend), see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
 ### 1. Run the Decoupled Frontend (Vite)
 ```bash
 cd frontend

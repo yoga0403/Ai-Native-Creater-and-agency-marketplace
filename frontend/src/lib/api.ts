@@ -17,7 +17,8 @@ import {
 import { supabaseRest, isSupabaseConfigured } from "./supabaseClient";
 export { isSupabaseConfigured };
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api'))
+  .replace(/\/+$/, '');
 
 // Local storage keys for resilient persistence
 const STORAGE_KEYS = {
@@ -675,4 +676,3 @@ export const resetPassword = async (email: string): Promise<string> => {
   }
   return `Password reset instructions dispatched to ${cleanEmail}. (Demo password is: password123)`;
 };
-

@@ -1,12 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-<<<<<<< HEAD
-/node_modules
-frontend/node_modules/
-=======
 node_modules/
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
 /.pnp
 .pnp.*
 .yarn/*
@@ -16,31 +11,17 @@ node_modules/
 !.yarn/versions
 
 # testing
-<<<<<<< HEAD
-/coverage
+coverage/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# Next.js and Vite
+.next/
+out/
+build/
 dist/
 
 # Python
 venv/
 __pycache__/
-=======
-coverage/
-
-# next.js and vite
-.next/
-out/
-dist/
-
-# production
-build/
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
 
 # misc
 .DS_Store
@@ -54,10 +35,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-<<<<<<< HEAD
 !.env.example
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
 
 # vercel
 .vercel

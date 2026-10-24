@@ -8,8 +8,31 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const allowedOrigins = new Set(
+  (process.env.FRONTEND_URL || '')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean)
+);
 
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.has(origin)) {
+      return callback(null, true);
+    }
+
+    if (process.env.NODE_ENV !== 'production' && /^http:\/\/localhost(:\d+)?$/.test(origin)) {
+      return callback(null, true);
+    }
+
+    try {
+      const { hostname, protocol } = new URL(origin);
+      return callback(null, protocol === 'https:' && hostname.endsWith('.vercel.app'));
+    } catch {
+      return callback(null, false);
+    }
+  },
+}));
 app.use(express.json());
 
 // Serve static video files with proper MIME type and HTTP byte range support
@@ -672,5 +695,5 @@ app.get('/api/auth/me', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`CreatorConnect AI API running on http://localhost:${PORT}`);
+  console.log(`CreatorConnect AI API listening on port ${PORT}`);
 });
