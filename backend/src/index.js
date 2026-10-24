@@ -694,6 +694,15 @@ app.get('/api/auth/me', (req, res) => {
   res.json({ success: true, user: safeUser });
 });
 
+const frontendDist = path.resolve(__dirname, '../../frontend/dist');
+app.use(express.static(frontendDist));
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api/')) {
+    return next();
+  }
+  res.sendFile(path.join(frontendDist, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`CreatorConnect AI API listening on port ${PORT}`);
+  console.log(`CreatorConnect AI listening on port ${PORT}`);
 });

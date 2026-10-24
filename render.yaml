@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: creatorconnect-api
+    name: creatorconnect-marketplace
     runtime: node
-    rootDir: backend
-    buildCommand: npm ci
-    startCommand: npm start
+    buildCommand: npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend
+    startCommand: npm start --prefix backend
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV

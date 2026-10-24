@@ -1,30 +1,26 @@
 # Deployment
 
-The app is split into a Vite frontend and an Express API. Deploy them as separate services.
+## Deploy the complete website on Render
 
-## 1. Deploy the API to Render
+The Render web service serves both the built Vite frontend and the Express API from one origin. The root [`render.yaml`](./render.yaml) builds the frontend and starts the backend; the backend serves the frontend build and handles `/api/*` requests.
 
-1. In Render, create a **Blueprint** from this GitHub repository and select `render.yaml`, or create a Node web service manually.
-2. For a manual service, set the root directory to `backend`, the build command to `npm ci`, and the start command to `npm start`.
-3. Wait for the service to deploy. Check `https://<your-render-service>.onrender.com/api/health`.
-4. In the service environment settings, set `FRONTEND_URL` to the exact Vercel production origin (for example, `https://your-site.vercel.app`). Multiple origins can be comma-separated. Vercel preview origins are allowed automatically.
+1. Push the repository to GitHub and connect it to Render.
+2. Create or update a Render Blueprint using `render.yaml`.
+3. For an existing manually configured service, open **Settings → Build & Deploy** and set:
+   - **Root Directory:** blank (repository root)
+   - **Build Command:** `npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend`
+   - **Start Command:** `npm start --prefix backend`
+4. Set `NODE_VERSION` to `22.12.0` and `NODE_ENV` to `production` in the Render environment settings.
+5. Deploy. Open the service URL to load the website and check `/api/health` for the API health response.
 
-The server listens on Render's `PORT`, and `/api/health` is the configured health check.
+No `VITE_API_BASE_URL` is needed for this single-origin deployment: production requests use `/api` on the same Render service. Videos are served by the backend's `/videos` route.
 
-## 2. Deploy the frontend to Vercel
+## Optional separate Vercel frontend
 
-1. Import the same GitHub repository into Vercel.
-2. Set **Root Directory** to `frontend` and keep the Vite framework preset.
-3. Set the build command to `npm run build` and the output directory to `dist`.
-4. Add the environment variable `VITE_API_BASE_URL` with the full API path, for example `https://<your-render-service>.onrender.com/api`.
-5. Deploy or redeploy after setting the environment variable.
+To deploy the frontend separately, import the repository into Vercel, set its **Root Directory** to `frontend`, build command to `npm run build`, and output directory to `dist`. Set `VITE_API_BASE_URL` to the Render URL ending in `/api`, then redeploy. Set Render's `FRONTEND_URL` to the Vercel production origin. The Vercel SPA fallback is configured in [`frontend/vercel.json`](./frontend/vercel.json).
 
-`frontend/vercel.json` configures the SPA fallback. Videos are served from the frontend's own `public/videos` directory.
+## Environment and persistence
 
-## Local environment
+Copy `.env.example` to `.env` for local backend settings. Keep server-only keys out of frontend variables and never commit `.env`.
 
-Copy `.env.example` to `.env` in the repository root for local backend configuration. Do not commit `.env` or put server-only keys in Vercel variables. The API allows localhost origins outside production and Vercel origins in production; set `FRONTEND_URL` for a custom frontend domain.
-
-## Data and production-readiness note
-
-The current API uses in-memory demo accounts, collaborations, and messages, while the browser stores other demo data in local storage. API data is reset when the Render service restarts or scales, and browser-local data is not shared between users or devices. The existing Supabase helper files are not yet wired into these API routes. Treat this deployment as a demo; before using it for real accounts or campaigns, replace the demo authentication and connect the API data routes to a persistent database.
+The current API uses in-memory demo accounts, collaborations, and messages, while the browser stores other demo data in local storage. API data can reset when the Render service restarts or scales, and browser-local data is not shared between users or devices. The existing Supabase helpers are not yet wired into these API routes. Treat this as a demo until authentication and API data are connected to persistent storage.
