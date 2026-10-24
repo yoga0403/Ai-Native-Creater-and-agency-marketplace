@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import {
   Search,
   Mic,
@@ -68,23 +68,15 @@ export const VoiceSearchBar: React.FC<VoiceSearchBarProps> = ({
   const [selectedLanguage, setSelectedLanguage] = useState<'en-US' | 'te-IN'>('en-US');
   const [showLanguageMenu, setShowLanguageMenu] = useState<boolean>(false);
   const [interimTranscript, setInterimTranscript] = useState<string>('');
-  const [hasSpeechSupport, setHasSpeechSupport] = useState<boolean>(true);
   const [isHoveredMic, setIsHoveredMic] = useState<boolean>(false);
 
   const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const statusTimeoutRef = useRef<number | null>(null);
-
-  // Check Web Speech API support
-  useEffect(() => {
-    const SpeechRecognitionClass =
-      (window as unknown as { SpeechRecognition?: new () => SpeechRecognitionInstance }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: new () => SpeechRecognitionInstance }).webkitSpeechRecognition;
-
-    if (!SpeechRecognitionClass) {
-      setHasSpeechSupport(false);
-    }
-  }, []);
+  const hasSpeechSupport = typeof window !== 'undefined' && Boolean(
+    (window as unknown as { SpeechRecognition?: new () => SpeechRecognitionInstance }).SpeechRecognition ||
+    (window as unknown as { webkitSpeechRecognition?: new () => SpeechRecognitionInstance }).webkitSpeechRecognition
+  );
 
   // Natural Language Intent Extractor (English & Telugu)
   const processIntent = useCallback((text: string) => {

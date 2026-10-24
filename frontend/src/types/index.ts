@@ -1,18 +1,31 @@
 export type UserRole = "creator" | "brand" | "admin";
 
 export type MediaCategory =
-  | "Bridal & Wedding"
-  | "Clothing & Fashion"
-  | "Drinks & Beverage"
   | "Jewellery & Accessories"
+  | "Clothing & Fashion"
+  | "Colleges & Education"
   | "Beauty & Skincare"
-  | "Food & Restaurants"
-  | "Travel & Lifestyle"
+  | "Restaurants & Food"
   | "Electronics & Tech"
-  | "Cinematic"
-  | "Commercial Product";
+  | "Travel & Tourism"
+  | "Healthcare & Fitness"
+  | "Real Estate & Housing"
+  | "Local Businesses & Startups"
+  | "Bridal & Wedding"
+  | "Drinks & Beverage"
+  | "Cinematic";
 
-export type SocialPlatform = "Instagram" | "YouTube" | "TikTok" | "Facebook";
+export type SocialPlatform = "Instagram" | "YouTube" | "TikTok" | "Facebook" | "LinkedIn";
+
+export type ContentFormat =
+  | "Reel"
+  | "Short Video"
+  | "Review"
+  | "Unboxing"
+  | "Campus Tour"
+  | "Long Video"
+  | "Photo / Still"
+  | "3D Model / CAD";
 
 export interface PortfolioItem {
   id: string;
@@ -20,19 +33,10 @@ export interface PortfolioItem {
   mediaUrl: string;
   videoUrl?: string; // Direct video streaming link for HTML5 playback
   thumbnailUrl?: string; // High-res poster frame before play
-<<<<<<< HEAD
-  videoAttribution?: {
-    title: string;
-    creator: string;
-    license: string;
-    sourceUrl: string;
-    licenseUrl: string;
-  };
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
   duration?: string; // e.g. "0:30", "0:45"
   mediaType: "image" | "video" | "audio" | "3d";
   category: MediaCategory;
+  contentFormat?: ContentFormat;
   prompt: string;
   negativePrompt?: string;
   model: string;
@@ -46,6 +50,13 @@ export interface PortfolioItem {
   createdAt: string;
 }
 
+export interface CreatorPricing {
+  startingRate?: number;
+  hourlyRate?: number;
+  perReelRate?: number;
+  currency: string;
+}
+
 export interface CreatorProfile {
   id: string;
   name: string;
@@ -54,19 +65,44 @@ export interface CreatorProfile {
   coverUrl: string;
   headline: string;
   bio: string;
-  location: string;
+  location?: string | null;
+  languages?: string[];
   category: MediaCategory;
+  specializations: string[];
   platforms: SocialPlatform[];
-  followerCount: string; // e.g. "320K", "1.2M"
-  isVerified: boolean;
-  rating: number;
-  reviewsCount: number;
-  completedBriefs: number;
-  hourlyRate: number;
+  followerCount?: string | null; // e.g. "320K" or null ("Not provided")
+  isVerified?: boolean;
+  rating?: number | null;
+  reviewsCount?: number;
+  completedBriefs?: number;
+  hourlyRate?: number | null;
+  pricing?: CreatorPricing;
+  preferredFormats: ContentFormat[];
+  availability?: string | null;
   tools: string[];
   styles: string[];
   portfolio: PortfolioItem[];
   badges: string[];
+}
+
+export interface BusinessProfile {
+  id: string;
+  userId: string;
+  name: string;
+  category: MediaCategory;
+  logoUrl?: string;
+  location?: string;
+  productsServices: string[];
+  websiteUrl?: string;
+  instagramUrl?: string;
+  youtubeUrl?: string;
+  uploadedMedia: {
+    id: string;
+    title: string;
+    mediaUrl: string;
+    type: "video" | "image";
+    createdAt: string;
+  }[];
 }
 
 export interface BusinessCategoryInfo {
@@ -84,24 +120,67 @@ export interface BusinessCategoryInfo {
 
 export interface BrandBrief {
   id: string;
+  businessId?: string;
   brandName: string;
   brandLogo: string;
   brandIndustry: string;
   title: string;
   description: string;
   category: MediaCategory;
+  productService?: string;
+  objective?: string;
+  platform?: string;
+  contentType?: ContentFormat;
+  targetAudience?: string;
+  preferredLanguage?: string;
+  preferredLocation?: string;
   budgetMin: number;
   budgetMax: number;
   currency: string;
   deadline: string;
   requiredTools: string[];
   deliverablesCount: number;
+  deliverablesSummary?: string;
+  contactPreference?: "In-Platform Chat" | "Email" | "Phone";
   aspectRatio: string;
   resolution: string;
   status: "open" | "in_review" | "assigned" | "completed";
   proposalsCount: number;
   createdAt: string;
   featured?: boolean;
+}
+
+export type CollaborationStatus = "Pending" | "Accepted" | "Rejected" | "Completed";
+
+export interface CollaborationRequest {
+  id: string;
+  businessId: string;
+  businessName: string;
+  businessLogo?: string;
+  creatorId: string;
+  creatorName: string;
+  creatorHandle?: string;
+  creatorAvatar?: string;
+  campaignTitle: string;
+  productService: string;
+  requirements: string;
+  budget: number;
+  deadline: string;
+  message: string;
+  contactPreference?: string;
+  status: CollaborationStatus;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CollaborationMessage {
+  id: string;
+  collaborationId: string;
+  senderId: string;
+  senderName: string;
+  senderRole: "brand" | "creator";
+  content: string;
+  createdAt: string;
 }
 
 export interface Proposal {
@@ -149,9 +228,8 @@ export interface UserAccount {
   handle?: string;
   avatarUrl?: string;
   companyName?: string;
+  category?: MediaCategory;
+  specialization?: string;
   bio?: string;
+  location?: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877

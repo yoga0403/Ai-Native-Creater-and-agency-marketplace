@@ -33,11 +33,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   aspectRatio = '16:9',
   autoPlay = false,
   loop = false,
-<<<<<<< HEAD
-  fallbackSrc,
-=======
   fallbackSrc = '/videos/cinematic-reel.mp4',
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
   onEnded,
   className = '',
 }) => {
@@ -45,7 +41,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Video State
-  const [activeSrc, setActiveSrc] = useState<string>(src);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
@@ -61,32 +56,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [showControls, setShowControls] = useState<boolean>(true);
   const hideControlsTimer = useRef<number | null>(null);
 
-  // Sync src prop changes
-  useEffect(() => {
-<<<<<<< HEAD
-    const normalizedSrc = typeof src === 'string' ? src.trim() : '';
-
-    if (!normalizedSrc) {
-      setActiveSrc('');
-      setErrorMessage('No valid video URL is available for this portfolio item.');
-      setIsUsingFallback(false);
-      setHasStarted(false);
-      setCurrentTime(0);
-      setIsPlaying(false);
-      setIsLoading(false);
-      return;
-    }
-
-    setActiveSrc(normalizedSrc);
-=======
-    setActiveSrc(src);
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
-    setErrorMessage(null);
-    setIsUsingFallback(false);
-    setHasStarted(autoPlay);
-    setCurrentTime(0);
-    setIsPlaying(false);
-  }, [src, autoPlay]);
+  const activeSrc = isUsingFallback ? fallbackSrc : src;
 
   // Social Media & Embed URL Detection
   const parseSocialUrl = (url: string) => {
@@ -286,26 +256,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     setIsLoading(false);
     setIsPlaying(false);
     const mediaError = videoRef.current?.error;
-<<<<<<< HEAD
-    let detail = 'The selected video source could not be loaded or the format is unsupported.';
-=======
     let detail = 'The video stream could not be loaded or format is unsupported.';
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     if (mediaError) {
       switch (mediaError.code) {
         case 1:
           detail = 'Playback was aborted.';
           break;
         case 2:
-<<<<<<< HEAD
-          detail = 'Network error caused the video download to fail.';
-          break;
-        case 3:
-          detail = 'The video file could not be decoded.';
-          break;
-        case 4:
-          detail = 'This video source is not supported or the URL is restricted.';
-=======
           detail = 'Network error caused video download to fail.';
           break;
         case 3:
@@ -313,7 +270,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           break;
         case 4:
           detail = 'Video source not supported or HTTP 403 Forbidden.';
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
           break;
       }
     }
@@ -322,16 +278,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   const switchToFallback = (e: React.MouseEvent) => {
     e.stopPropagation();
-<<<<<<< HEAD
-    if (!fallbackSrc || !src) {
-      setErrorMessage('This portfolio item does not include a valid video file.');
-      return;
-    }
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     setIsUsingFallback(true);
     setErrorMessage(null);
-    setActiveSrc(fallbackSrc);
     setHasStarted(true);
     setIsLoading(true);
     setTimeout(() => {
@@ -349,13 +297,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   const handleRetry = (e: React.MouseEvent) => {
     e.stopPropagation();
-<<<<<<< HEAD
-    if (!activeSrc) {
-      setErrorMessage('No valid video URL is available for this item.');
-      return;
-    }
-=======
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
     setErrorMessage(null);
     setIsLoading(true);
     if (videoRef.current) {
@@ -477,11 +418,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       {/* HTML5 Native Video Element */}
       <video
         ref={videoRef}
-<<<<<<< HEAD
-        src={activeSrc || undefined}
-=======
         src={activeSrc}
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         poster={poster}
         playsInline
         preload="metadata"
@@ -510,11 +447,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       />
 
       {/* 1. INITIAL POSTER THUMBNAIL & PLAY BUTTON OVERLAY */}
-<<<<<<< HEAD
-      {!hasStarted && !errorMessage && activeSrc && (
-=======
       {!hasStarted && !errorMessage && (
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
         <div
           onClick={togglePlay}
           style={{
@@ -669,18 +602,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           </p>
 
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-<<<<<<< HEAD
-            {fallbackSrc && fallbackSrc !== src && (
-              <button
-                onClick={switchToFallback}
-                className="btn btn-primary btn-sm"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
-              >
-                <RefreshCw style={{ width: '0.85rem', height: '0.85rem' }} />
-                <span>Play Verified Local MP4</span>
-              </button>
-            )}
-=======
             <button
               onClick={switchToFallback}
               className="btn btn-primary btn-sm"
@@ -689,7 +610,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               <RefreshCw style={{ width: '0.85rem', height: '0.85rem' }} />
               <span>Play Verified Local MP4</span>
             </button>
->>>>>>> 29237b25e9a45eed65d183c29fe34dc9e5084877
             <button
               onClick={handleRetry}
               className="btn btn-secondary btn-sm"
